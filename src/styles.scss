@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100% !important;
+  margin: 0;
+  cursor: url('src/assets/images/mouse.png'), auto;
+}
+
+@font-face {
+  font-family: SuisseBold;
+  src: url(assets/fonts/SuisseWorks/SuisseWorks-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: SuisseIntlRegular;
+  src: url(assets/fonts/SuisseIntl/SuisseIntl-Regular.otf) format("opentype");
+}
