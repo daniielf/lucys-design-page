@@ -2,6 +2,7 @@
 html, body {
   height: 100% !important;
   scroll-behavior: smooth;
+  cursor: url('src/assets/images/mouse_big.png') 32 32, auto;
 }
 
 .main-content {
@@ -35,6 +36,7 @@ html, body {
   font-size: 90px;
   font-family: 'SuisseBold';
   line-height: 100px;
+  color: #000;
 }
 
 ::selection {
@@ -45,7 +47,7 @@ html, body {
 .magic-link {
   font-style: italic;
   border-bottom: solid 4px #000;
-  cursor: url('src/assets/images/mouse.png'), pointer;
+  cursor: url('src/assets/images/mouse_small.png') 28 28, auto;
 }
 
 .magic-link::selection {
@@ -90,15 +92,16 @@ html, body {
 .about-me-txt {
   font-family: 'SuisseIntlRegular';
   line-height: 36px;
-  font-size: 44px;
+  font-size: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5% 0;
+  padding: 5% 10%;
+  color: #000;
 }
 .about-me-icon {
-  height: 40px;
+  height: 36px;
   margin-right: 10px;
 }
 .about-me-icon::selection {
@@ -106,7 +109,7 @@ html, body {
 }
 .about-me-topic {
   list-style-type: none;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   display: inline-flex;
   max-width: 80%;
 }
@@ -118,6 +121,10 @@ html, body {
   height: 30px;
   width: 30px;
   cursor: pointer;
+}
+
+.scroll-content {
+  height: 2000px;
 }
 
 .blue-color:hover { color: #3d84c5; border-bottom: solid 4px #3d84c5; }
@@ -193,7 +200,7 @@ html, body {
     font-size: 36px;
   }
   .about-me-icon {
-    height: 36px;
+    height: 32px;
   }
 }
 
@@ -206,7 +213,7 @@ html, body {
     font-size: 32px;
   }
   .about-me-icon {
-    height: 32px;
+    height: 28px;
   }
 }
 
@@ -219,7 +226,7 @@ html, body {
     font-size: 28px;
   }
   .about-me-icon {
-    height: 28px;
+    height: 24px;
   }
 }
 

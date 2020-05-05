@@ -1,8 +1,8 @@
 <div class="eye-box">
   <img class="gira" src="assets/images/gira.png" />
 </div>
-<div class="main-content">
-  <span class="home-main-text">
+<div id="mainContent" class="main-content">
+  <span id="mainText" class="home-main-text">
     Hello! I'm Lucy Ferreira, a   <br/>
     fresh out of school graphic   <br/>
     designer based in Toronto. <br /> 
@@ -14,12 +14,13 @@
     <!-- {{ displayAboutMe }} -->
   </span>
 </div>
+<div class="scroll-content">a</div>
 <div id="aboutme" [class]="getAboutMeClass()">
   <img class="close-btn" src="assets/images/close.png" (click)="hideAboutMe()" />
   <div class="about-me-txt">
       <p class="about-me-topic">
         <img src="assets/images/redstar.png" class="about-me-icon" />
-        <span class="about-me-topic-txt">I recently graduated with a Bachelor of Design from OCAD University majoring in Graphic cxesign and minoring in Enterpreneurship & Social Innovation.</span>
+        <span class="about-me-topic-txt">I recently graduated with a Bachelor of Design from OCAD University majoring in Graphic Design and minoring in Enterpreneurship & Social Innovation.</span>
       </p>
 
       <p class="about-me-topic">
@@ -35,7 +36,7 @@
       <p class="about-me-topic">
         <img src="assets/images/pinkarrow.png" class="about-me-icon" />
         <span class="about-me-topic-txt">
-          You can view my resume <a [class]="getMagicLinkClass()">here</a>, or get in tpuch with me at <a [class]="getMagicLinkClass()">contact@lucyferreira.design</a>
+          You can view <a [class]="getMagicLinkClass()">my resume</a>, or get in touch with me at <a [class]="getMagicLinkClass()">contact@lucyferreira.design</a>
         </span>
       </p>
   </div>

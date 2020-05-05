@@ -6,22 +6,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-  displayAboutMe: Boolean = false; 
+  displayAboutMe: Boolean = false;
   hoverIndex = 0;
-  constructor() { 
+  constructor() {
     setInterval(() => {
       this.hoverIndex = (this.hoverIndex + 1) % 5;
     }, 750);
+
   }
 
   ngOnInit(): void {
     console.log('HomePage Loaded');
     let aboutMe = document.getElementById("aboutme");
     aboutMe.hidden = true;
+
+    this.startScrollEffect();
   }
 
-  viewDidLoad() {
- 
+  startScrollEffect() {
+    window.addEventListener('scroll', this.scrollEvent, true);
+  }
+
+  scrollEvent = (event): void => {
+    let offset = event.target.scrollingElement.scrollTop
+    let mainContent = document.getElementById('mainContent');
+    mainContent.style.opacity = String(1 - Number(offset*1.6/mainContent.clientHeight));
   }
 
   showAboutMe() {
