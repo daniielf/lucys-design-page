@@ -2,7 +2,7 @@
 html, body {
   height: 100% !important;
   scroll-behavior: smooth;
-  cursor: url('src/assets/images/mouse_big.png') 32 32, auto;
+  cursor: url('src/assets/images/mouse_big.png') 0 0, auto;
 }
 
 .main-content {
@@ -114,13 +114,22 @@ html, body {
   max-width: 80%;
 }
 
-.close-btn {
+.close-btn-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 6px;
+  left: 6px;
+  height: 45px;
+  width: 45px;
+  cursor: url('src/assets/images/mouse_small.png') 28 28, auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn {
   height: 30px;
   width: 30px;
-  cursor: pointer;
+  cursor: url('src/assets/images/mouse_small.png') 28 28, auto;
 }
 
 .scroll-content {

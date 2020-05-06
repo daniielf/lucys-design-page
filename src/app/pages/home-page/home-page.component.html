@@ -16,7 +16,9 @@
 </div>
 <div class="scroll-content">a</div>
 <div id="aboutme" [class]="getAboutMeClass()">
-  <img class="close-btn" src="assets/images/close.png" (click)="hideAboutMe()" />
+  <div class="close-btn-box" (click)="hideAboutMe()" >
+    <img class="close-btn" src="assets/images/close.png" (click)="hideAboutMe()" />
+  </div>
   <div class="about-me-txt">
       <p class="about-me-topic">
         <img src="assets/images/redstar.png" class="about-me-icon" />
