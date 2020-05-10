@@ -2,7 +2,6 @@
 html, body {
   height: 100% !important;
   scroll-behavior: smooth;
-  cursor: url('src/assets/images/mouse_big.png') 0 0, auto;
 }
 
 .main-content {
@@ -11,6 +10,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  scroll-behavior: smooth;
 }
 
 .eye-box {
@@ -92,16 +92,17 @@ html, body {
 .about-me-txt {
   font-family: 'SuisseIntlRegular';
   line-height: 36px;
-  font-size: 40px;
+  font-size: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5% 10%;
+  margin-top: 5%;
   color: #000;
+  padding: 0% 10%;
 }
 .about-me-icon {
-  height: 36px;
+  height: 30px;
   margin-right: 10px;
 }
 .about-me-icon::selection {
@@ -133,7 +134,59 @@ html, body {
 }
 
 .scroll-content {
-  height: 2000px;
+  // height: 2000px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 150px;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+.slider-box {
+  height: 600px;
+  width: 800px;
+  display: flex;
+  overflow: visible;
+}
+
+.overlay {
+  position: absolute;
+  height: 600px;
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+}
+
+.clicable-column {
+  flex: 5;
+  z-index: 2;
+}
+
+.clicable-column:hover {
+  cursor: url('src/assets/images/mouse_small.png') 28 28, auto;
+}
+
+.left-overlay {
+  // background: #F00A;
+  flex:2;
+  justify-content: center;
+  display: flex;
+  z-index: 3;
+
+}
+.left-overlay:hover {
+  cursor: url('src/assets/images/arrow-l.png') 40 0, auto;
+}
+
+.right-overlay {
+  // background: #00FA;
+  flex: 2;
+  justify-content: center;
+  display: flex;
+  z-index: 3;
+}
+.right-overlay:hover {
+  cursor: url('src/assets/images/arrow-r.png') 40 0, auto;
 }
 
 .blue-color:hover { color: #3d84c5; border-bottom: solid 4px #3d84c5; }
@@ -161,6 +214,56 @@ html, body {
 .yellow-color::selection { background-color: #000; border-bottom: 0 !important;}
 .yellow-color:hover::selection { color: #ffc906; border-bottom: 0 !important; background-color: #000; }
 
+.img-slider {
+  width: 800px;
+  height: 580px;
+  background-color: #000;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  z-index: 3;
+}
+
+.index-span {
+  color: #000;
+  font-size: 24px;
+}
+
+.art-title {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.read-more-content {
+  margin-top: 20px;
+  width: 60%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.read-txt {
+  flex: 1
+}
+
+.read-more {
+  font-weight: bold;
+}
+
+.read-less {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.read-more:hover {
+  cursor: url('src/assets/images/mouse_small.png') 10 10, auto;
+}
+
+.read-less:hover {
+  cursor: url('src/assets/images/mouse_small.png') 10 10, auto;
+}
 
 @keyframes appear {
   from { opacity: 0; display: none;}
@@ -206,10 +309,14 @@ html, body {
     line-height: 100px;
   }
   .about-me-txt {
-    font-size: 36px;
+    font-size: 28px;
   }
   .about-me-icon {
-    height: 32px;
+    height: 28px;
+  }
+  .close-btn {
+    height: 30px;
+    width: 30px;
   }
 }
 
@@ -219,10 +326,14 @@ html, body {
     line-height: 90px;
   }
   .about-me-txt {
-    font-size: 32px;
+    font-size: 26px;
   }
   .about-me-icon {
+    height: 26px;
+  }
+  .close-btn {
     height: 28px;
+    width: 28px;
   }
 }
 
@@ -232,10 +343,14 @@ html, body {
     line-height: 80px;
   }
   .about-me-txt {
-    font-size: 28px;
+    font-size: 24px;
   }
   .about-me-icon {
     height: 24px;
+  }
+  .close-btn {
+    height: 26px;
+    width: 26px;
   }
 }
 
@@ -245,10 +360,14 @@ html, body {
     line-height: 70px;
   }
   .about-me-txt {
-    font-size: 24px;
+    font-size: 22px;
   }
   .about-me-icon {
+    height: 22px;
+  }
+  .close-btn {
     height: 24px;
+    width: 24px;
   }
 }
 
@@ -263,6 +382,10 @@ html, body {
   .about-me-icon {
     height: 20px;
   }
+  .close-btn {
+    height: 22px;
+    width: 22px;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -271,9 +394,13 @@ html, body {
     line-height: 60px;
   }
   .about-me-txt {
-    font-size: 16px;
+    font-size: 18px;
   }
   .about-me-icon {
-    height: 16px;
+    height: 18px;
+  }
+  .close-btn {
+    height: 20px;
+    width: 20px;
   }
 }

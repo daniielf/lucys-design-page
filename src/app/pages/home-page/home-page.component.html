@@ -5,16 +5,58 @@
   <span id="mainText" class="home-main-text">
     Hello! I'm Lucy Ferreira, a   <br/>
     fresh out of school graphic   <br/>
-    designer based in Toronto. <br /> 
-    Take a look at 
-    <a [class]="getMagicLinkClass()">my work</a>,
-    <br /> 
-    read more 
+    designer based in Toronto. <br />
+    Take a look at
+    <a [class]="getMagicLinkClass()" (click)="scrollToContent(myWorks)">my work</a>,
+    <br />
+    read more
     <a [class]="getMagicLinkClass()" (click)="showAboutMe()">about me</a>.
     <!-- {{ displayAboutMe }} -->
   </span>
 </div>
-<div class="scroll-content">a</div>
+<div #myWorks id="scrollContent" class="scroll-content">
+
+
+  <!-- BLACK MIRROR  -->
+  <span class="art-title">{{ blackMirror.title }}</span>
+  <div class="slider-box">
+    <ng-image-slider #slider1 class="img-slider" [manageImageRatio]="true" [infinite]="true" [showArrow]="false" [imageSize]="imagesSize" [images]="blackMirror.images" (imageClick)="goFullScreen()" (lightboxClose)="closeFullSCreen()" #nav></ng-image-slider>
+    <div [class]="getOverlayClass()">
+      <div class="left-overlay" (click)="prevSlide('slider1')"></div>
+      <div class="clicable-column"></div>
+      <div class="right-overlay" (click)="nextSlide('slider1')"></div>
+    </div>
+  </div>
+  <span class="index-span">{{ blackMirrorIndex }} / {{ blackMirror.images.length }} </span>
+  <div  class="read-more-content">
+    <span *ngIf="readMoreTargetId !== 'readMore1'" (click)="toggleReadMore($event)" id="readMore1" class="read-more">[READ MORE]</span>
+    <span *ngIf="readMoreTargetId === 'readMore1'" class="read-more-txt">{{ blackMirror.description }}</span>
+    <span *ngIf="readMoreTargetId === 'readMore1'" (click)="toggleReadMore($event)" class="read-less">[READ LESS]</span>
+  </div>
+
+  <div style="height: 100px;"></div>
+
+  <!-- BLACK MIRROR  -->
+  <span class="art-title">{{ cannesFestival.title }}</span>
+  <div class="slider-box">
+    <ng-image-slider #slider2 class="img-slider" [manageImageRatio]="true" [infinite]="true" [showArrow]="false" [imageSize]="imagesSize" [images]="cannesFestival.images" (imageClick)="goFullScreen()" (lightboxClose)="closeFullSCreen()" #nav></ng-image-slider>
+    <div [class]="getOverlayClass()">
+      <div class="left-overlay" (click)="prevSlide('slider2')"></div>
+      <div class="clicable-column"></div>
+      <div class="right-overlay" (click)="nextSlide('slider2')"></div>
+    </div>
+  </div>
+  <span class="index-span">{{ cannesFestivalIndex }} / {{ cannesFestival.images.length }} </span>
+  <div  class="read-more-content">
+    <span *ngIf="readMoreTargetId !== 'readMore2'" (click)="toggleReadMore($event)" id="readMore2" class="read-more">[READ MORE]</span>
+    <span *ngIf="readMoreTargetId === 'readMore2'" class="read-more-txt">{{ cannesFestival.description }}</span>
+    <span *ngIf="readMoreTargetId === 'readMore2'" (click)="toggleReadMore($event)" class="read-less">[READ LESS]</span>
+  </div>
+
+  <div style="height: 100px;"></div>
+
+
+</div>
 <div id="aboutme" [class]="getAboutMeClass()">
   <div class="close-btn-box" (click)="hideAboutMe()" >
     <img class="close-btn" src="assets/images/close.png" (click)="hideAboutMe()" />

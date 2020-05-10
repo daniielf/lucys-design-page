@@ -1,0 +1,21 @@
+<div class="slide-content">
+  <div class="left-slide">
+    <img *ngIf="index > 1" class="image" [src]="slides[index - 2]"/>
+  </div>
+  <div class="center-slide">
+    <img class="image" [src]="slides[index - 1]" />
+  </div>
+  <div class="right-slide">
+    <img *ngIf="index < (slides.length - 1)" class="image" [src]="slides[index]"/>
+  </div>
+
+  <div class="overlay">
+    <div class="left-overlay">
+    </div>
+    <div class="right-overlay">
+    </div>
+  </div>
+  <div class="count-box">
+    <span class="count-txt">{{index}}/{{slides?.length}}</span>
+  </div>
+</div>
