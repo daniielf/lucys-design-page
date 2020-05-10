@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgImageSliderComponent } from 'ng-image-slider';
 
-const {BlackMirror, CannesFilmFestival} = require('../../contents/contents.js');
+import {BlackMirror, CannesFilmFestival} from '../../contents/contents.js'  ;
 
 
 @Component({
